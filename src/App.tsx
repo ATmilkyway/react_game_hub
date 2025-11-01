@@ -1,17 +1,29 @@
-import { Button, ButtonGroup, HStack } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <ButtonGroup colorPalette="teal">
-        <Button loading loadingText="Loading" spinnerPlacement="start">
-          Submit
-        </Button>
-        <Button loading loadingText="Loading" spinnerPlacement="end">
-          Continue
-        </Button>
-      </ButtonGroup>
+      <Grid
+        templateAreas={{
+          base: `"nav" " main"`,
+          lg: `"nav nav" "aside main"`,
+        }}
+      >
+        <GridItem area="nav" bg="coral">
+          Nav
+        </GridItem>
+        <GridItem
+          area="aside"
+          bg="coral"
+          display={{ base: "none", lg: "block" }}
+        >
+          Aside
+        </GridItem>
+        <GridItem area="main" bg="dodgerblue">
+          Main
+        </GridItem>
+      </Grid>
     </>
   );
 }
