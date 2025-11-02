@@ -1,8 +1,9 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://api.rawg.io/api/",
+  baseURL: import.meta.env.VITE_API_BASE_URL,
   params: {
-    key: "a4aa322797804b44befc7ef427713122",
+    // the key has changed :)
+    key: import.meta.env.VITE_API_KEY,
   },
 });
