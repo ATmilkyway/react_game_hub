@@ -6,7 +6,7 @@ import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "@/services/image-url";
 const GameCard = ({ game }: { game: Game }) => {
   return (
-    <Card.Root maxW="sm" overflow="hidden" width="300px">
+    <Card.Root maxW="sm" overflow="hidden">
       {/* <Image src={game.background_image} alt={game.name} /> */}
       <Image src={getCroppedImageUrl(game.background_image)} alt={game.name} />
       <Card.Body gap="2" width="100%">

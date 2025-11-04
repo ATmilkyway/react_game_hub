@@ -15,10 +15,10 @@ export const GameGrid = () => {
         columns={{
           sm: 1,
           md: 2,
-          xl: 3,
-          lg: 5,
+          lg: 3,
+          xl: 5,
         }}
-        gap="40px"
+        gap={3}
         padding="10px"
       >
         {isLoading &&
