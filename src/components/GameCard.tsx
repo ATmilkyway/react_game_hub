@@ -5,7 +5,6 @@ import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "@/services/image-url";
 const GameCard = ({ game }: { game: Game }) => {
-  console.log(getCroppedImageUrl(game.background_image));
   return (
     <Card.Root maxW="sm" overflow="hidden" width="300px">
       {/* <Image src={game.background_image} alt={game.name} /> */}
