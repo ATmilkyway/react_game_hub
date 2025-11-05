@@ -1,0 +1,8 @@
+form {
+  width: 100%;
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
