@@ -11,8 +11,8 @@ import {
 } from "@chakra-ui/react";
 
 interface Props {
-  onSelecteGenre: (genre: Genre) => void;
   selectedGenre: Genre | null;
+  onSelecteGenre: (genre: Genre) => void;
 }
 const GenreList = ({ onSelecteGenre, selectedGenre }: Props) => {
   const { data, isLoading } = useGenres();
