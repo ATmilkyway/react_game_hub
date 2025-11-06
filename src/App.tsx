@@ -1,4 +1,5 @@
 import { Grid, Box } from "@chakra-ui/react";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
@@ -9,28 +10,12 @@ const App = () => {
         lg: `"navbar navbar"
              "sidebar main"`,
       }}
-      gridTemplateColumns={{
-        base: "1fr",
-        lg: "250px 1fr",
-      }}
-      gridTemplateRows={{
-        base: "60px 1fr",
-      }}
       gap={4}
-      minH="100vh"
       p={4}
-      bg="gray.900"
-      color="white"
     >
       {/* Navbar */}
-      <Box
-        gridArea="navbar"
-        bg="purple.600"
-        borderRadius="lg"
-        p={4}
-        boxShadow="lg"
-      >
-        Navbar
+      <Box gridArea="navbar">
+        <Navbar />
       </Box>
 
       {/* Sidebar */}
