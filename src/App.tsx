@@ -10,6 +10,10 @@ const App = () => {
         lg: `"navbar navbar"
              "sidebar main"`,
       }}
+      templateColumns={{
+        base: "1fr",
+        lg: "200px 1fr",
+      }}
       gap={4}
       p={4}
     >
