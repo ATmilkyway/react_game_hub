@@ -8,7 +8,7 @@ import {
 
 const GameCardSkeleton = () => {
   return (
-    <Card.Root width="300px" maxW="sm" overflow="hidden">
+    <Card.Root>
       <Skeleton height="200px" width="100%" />
       <Card.Body gap="2">
         <Card.Title fontSize="2xl">
