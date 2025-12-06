@@ -11,17 +11,16 @@ import SortSelector from "./components/SortSelector";
 export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
+  sortOrder: string | null;
 }
 
 const App = () => {
   const [gameQuery, setGameQuery] = useState<GameQuery>({
     genre: null,
     platform: null,
+    sortOrder: null,
   });
-  // const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
-  // const [selectedPlatform, setSelectedPlatform] = useState<Platform | null>(
-  //   null
-  // );
+
   return (
     <Grid
       templateAreas={{
@@ -52,9 +51,9 @@ const App = () => {
             }
           />
           <SortSelector
-            selectedPlatform={gameQuery.platform}
-            onSelectedPlatform={(platform) =>
-              setGameQuery({ ...gameQuery, platform })
+            sortOrder={gameQuery.sortOrder}
+            onSelectSortOrder={(sortOrder) =>
+              setGameQuery({ ...gameQuery, sortOrder })
             }
           />
         </Flex>
