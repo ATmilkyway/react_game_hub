@@ -21,7 +21,7 @@ const PlatformSelector = ({ selectedPlatform, onSelectPlatform }: Props) => {
         <Menu.Positioner>
           <Menu.Content minW="10rem">
             <Menu.RadioItemGroup>
-              {data.map((item) => (
+              {data?.results.map((item) => (
                 <Menu.RadioItem
                   key={item.id}
                   value={item.name}
