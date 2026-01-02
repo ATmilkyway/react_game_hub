@@ -1,10 +1,13 @@
-import type { FetchResponse } from "@/hooks/useData";
 import axios, { type AxiosRequestConfig } from "axios";
 
+export interface FetchResponse<T> {
+  count: number;
+  next: string | null;
+  results: T[];
+}
 const axiosInstance = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL,
   params: {
-    // the key has changed :)
     key: import.meta.env.VITE_API_KEY,
   },
 });
