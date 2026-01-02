@@ -1,5 +1,4 @@
-import type { PlatForm } from "@/hooks/useGames";
-import { HStack, Icon } from "@chakra-ui/react";
+ import { HStack, Icon } from "@chakra-ui/react";
 import {
   FaWindows,
   FaPlaystation,
@@ -12,8 +11,9 @@ import { MdPhone } from "react-icons/md";
 import { SiAtari, SiNintendo, SiSega } from "react-icons/si";
 import { BsGlobe, BsQuestionCircle } from "react-icons/bs";
 import type { IconType } from "react-icons";
+import type { Platform } from "@/hooks/usePlatforms";
 
-const PlatformIconList = ({ platforms }: { platforms: PlatForm[] }) => {
+const PlatformIconList = ({ platforms }: { platforms: Platform[] }) => {
   const iconMap: { [key: string]: IconType } = {
     // PC / Desktop
     pc: FaWindows,

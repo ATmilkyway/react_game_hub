@@ -2,18 +2,13 @@ import type { GameQuery } from "@/App";
 import apiClient from "@/services/api-client";
 import { useQuery } from "@tanstack/react-query";
 import { type FetchResponse } from "./useData";
-
-export interface PlatForm {
-  id: number;
-  name: string;
-  slug: string;
-}
+import type { Platform } from "./usePlatforms";
 
 export interface Game {
   id: number;
   name: string;
   background_image: string;
-  parent_platforms: { platform: PlatForm }[];
+  parent_platforms: { platform: Platform }[];
   metacritic: number;
 }
 
