@@ -12,10 +12,10 @@ import {
 } from "@chakra-ui/react";
 
 interface Props {
-  selectedGenre: Genre | null;
+  selectedGenreID?: number;
   onSelecteGenre: (genre: Genre) => void;
 }
-const GenreList = ({ onSelecteGenre, selectedGenre }: Props) => {
+const GenreList = ({ onSelecteGenre, selectedGenreID }: Props) => {
   const { data, isLoading } = useGenres();
 
   if (isLoading)
@@ -47,7 +47,7 @@ const GenreList = ({ onSelecteGenre, selectedGenre }: Props) => {
                 onClick={() => {
                   onSelecteGenre(genre);
                 }}
-                fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
+                fontWeight={genre.id === selectedGenreID ? "bold" : "normal"}
                 whiteSpace="normal"
                 textAlign="left"
                 maxW="200px"

@@ -11,7 +11,7 @@ import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
 
 export interface GameQuery {
-  genre: Genre | null;
+  genreId?: number;
   platform: Platform | null;
   sortOrder: string;
   searchText: string;
@@ -49,9 +49,9 @@ function App() {
           paddingX={5}
         >
           <GenreList
-            selectedGenre={gameQuery.genre}
+            selectedGenreID={gameQuery.genreId}
             onSelecteGenre={(genre) => {
-              setGameQuery({ ...gameQuery, genre });
+              setGameQuery({ ...gameQuery, genreId: genre.id });
             }}
           />
         </GridItem>
