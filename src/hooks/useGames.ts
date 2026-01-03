@@ -20,7 +20,7 @@ const useGames = (gameQuery: GameQuery) =>
       apiClent.getAll({
         params: {
           genres: gameQuery.genreId,
-          platforms: gameQuery.platform?.id,
+          platforms: gameQuery.platformId,
           ordering: gameQuery.sortOrder,
           search: gameQuery.searchText,
           page: pageParam,
