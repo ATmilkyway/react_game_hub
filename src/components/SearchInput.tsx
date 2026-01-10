@@ -2,16 +2,19 @@ import useGameQueryStore from "@/store";
 import { Input, InputGroup } from "@chakra-ui/react";
 import { useRef } from "react";
 import { LuSearch } from "react-icons/lu";
+import { useNavigate } from "react-router-dom";
 
 const SearchInput = () => {
   const setSearchText = useGameQueryStore((s) => s.setSearchText);
   const ref = useRef<HTMLInputElement>(null);
+  const navigate = useNavigate();
   return (
     // <Input borderRadius={20} placeholder="Search games..." variant={"subtle"} />
     <form
       onSubmit={(event) => {
         event.preventDefault();
         if (ref.current) setSearchText(ref.current.value);
+        navigate("/");
       }}
     >
       <InputGroup flex="1" startElement={<LuSearch />} borderRadius={20}>
