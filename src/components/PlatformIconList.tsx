@@ -11,7 +11,7 @@ import { MdPhone } from "react-icons/md";
 import { SiAtari, SiNintendo, SiSega } from "react-icons/si";
 import { BsGlobe, BsQuestionCircle } from "react-icons/bs";
 import type { IconType } from "react-icons";
-import type { Platform } from "@/entities/Platform";
+import type Platform from "@/entities/Platform";
 
 const PlatformIconList = ({ platforms }: { platforms: Platform[] }) => {
   const iconMap: { [key: string]: IconType } = {
